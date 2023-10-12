@@ -3,9 +3,9 @@ import {iosChecker} from './ios-checker';
 export class ScrollLock {
   constructor() {
     this._iosChecker = iosChecker;
-    this._lockClass = this._iosChecker() ? 'scroll-lock-ios' : 'scroll-lock';
+    this._lockClass = this._iosChecker() ? `scroll-lock-ios` : `scroll-lock`;
     this._scrollTop = null;
-    this._fixedBlockElements = document.querySelectorAll('[data-fix-block]');
+    this._fixedBlockElements = document.querySelectorAll(`[data-fix-block]`);
   }
 
   _getScrollbarWidth() {
@@ -40,7 +40,7 @@ export class ScrollLock {
     this._fixedBlockElements.forEach((block) => {
       block.style.paddingRight = null;
     });
-    document.body.removeAttribute('data-scroll');
+    document.body.removeAttribute(`data-scroll`);
     this._scrollTop = null;
   }
 }

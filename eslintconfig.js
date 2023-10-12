@@ -166,6 +166,6 @@ module.exports = {
       'exports': 'never',
       'functions': 'never',
     }],
-    'quotes': ['error', 'single'],
+    'quotes': ['error', 'backtick'],
   },
 };

@@ -9,7 +9,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener(`DOMContentLoaded`, () => {
 
   // Utils
   // ---------------------------------
@@ -22,7 +22,4 @@ window.addEventListener('DOMContentLoaded', () => {
   initForm();
   initModals();
   initTooltips();
-
-  window.addEventListener('load', () => {
-  });
 });
