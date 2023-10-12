@@ -1,0 +1,73 @@
+.custom-checkbox {
+  label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 18px;
+      height: 18px;
+
+      background-color: $color-default-white;
+      border: 1px solid $color-royal-blue;
+      border-radius: 4px;
+      transition: 0.3s ease-in-out border-color;
+    }
+  }
+
+  input:active + label,
+  input:focus + label {
+    outline: none;
+    -webkit-tap-highlight-color: transparent; // for client 274
+
+    &::before {
+      border-color: $color-olivine;
+    }
+  }
+
+  input:checked + label {
+    -webkit-tap-highlight-color: transparent; // for client 274
+
+    &::before {
+      background-color: $color-royal-blue;
+      border: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 5px;
+      width: 10px;
+      height: 7px;
+      transform: rotate(-45deg);
+      border-left: 2px solid $color-default-white;
+      border-bottom: 2px solid $color-default-white;
+    }
+  }
+
+  input[aria-invalid="true"] + label {
+    animation: pulse-red-checkbox 1.5s;
+  }
+}
+
+@keyframes pulse-red-checkbox {
+  0% {
+    text-shadow: none;
+  }
+
+  70% {
+    text-shadow: 1px 3px 20px $color-alizarin;
+  }
+
+  100% {
+    text-shadow: none;
+  }
+}

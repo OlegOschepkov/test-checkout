@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- - Forms-->
+<!-- - Modals-->
+<html lang="ru">
+  <head>
+    <title>Тестовое</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Тестовое">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container"><a class="logo" href="index.html" aria-label="Переход на главную">
+            <svg class="icon" width="179" height="50" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#logo"></use>
+            </svg></a>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <h1 class="visually-hidden">Главная страница</h1>
+          <h2 class="title title--h2">Checkout</h2>
+          <div class="checkout-list">
+            <h3 class="title title--h3">Products</h3>
+            <ul class="checkout-list__table">
+              <li class="checkout-list__element">
+                <p class="checkout-list__description"><a class="link" href="#">Apple&#174; - iPad&#174; with Retina&#174; display Wi-Fi - 32Gb - White</a>
+                </p>
+                <p class="checkout-list__price">&#36;499.00</p>
+              </li>
+              <li class="checkout-list__element">
+                <p class="checkout-list__description"><a class="link" href="#">16Gb A Series Walkman Video MP3</a>
+                </p>
+                <p class="checkout-list__price">&#36;130.00</p>
+              </li>
+            </ul>
+          </div>
+          <div class="checkout-list">
+            <h3 class="title title--h3">Shipping method</h3>
+            <ul class="checkout-list__table">
+              <li class="checkout-list__element">
+                <p class="checkout-list__description">FedEx
+                </p>
+                <p class="checkout-list__price">&#36;13.99</p>
+              </li>
+            </ul>
+          </div>
+          <div class="payment-selection" data-tab-parent>
+            <div class="title title--h3">Payment method</div>
+            <div class="payment-selection__controls" data-tab-controls>
+              <button class="btn btn--white is-active" type="button" data-tab-anchor-link="creditCard"><span class="btn__title">Credit card</span>
+              </button>
+              <button class="btn btn--white" type="button" data-tab-anchor-link="giftCard"><span class="btn__title">Gift card</span>
+              </button>
+              <button class="btn btn--white" type="button" data-tab-anchor-link="payPal"><span class="btn__title">PayPal</span>
+              </button>
+            </div>
+            <div class="payment-selection__content-tabs" data-tab-content>
+              <div class="payment-selection__element is-active" data-tab-anchor="creditCard">
+                <div class="payment-form" data-form>
+                  <form action="#" method="post" novalidate>
+                    <div class="payment-form__wrapper">
+                      <div class="payment-form__fieldset payment-form__fieldset--left">
+                        <div class="custom-input custom-input--with-icon custom-input--card-icon" data-form-input-validation="card-number">
+                          <label><span class="custom-input__label">Card number<span class="custom-input__blue-text">*</span></span>
+                            <input type="text" id="card-number" name="data[card-number]" minlength="19" maxlength="19" required aria-required>
+                            <svg class="icon" width="39" height="25" aria-hidden="true">
+                              <use xlink:href="img/sprite_auto.svg#icon-card"></use>
+                            </svg>
+                          </label>
+                        </div>
+                        <div class="payment-form__row">
+                          <h4 class="payment-form__subtitle is-required">Valid thru (mm/yy)</h4>
+                          <div class="custom-input" data-form-input-validation="card-month">
+                            <label><span class="custom-input__label visually-hidden">Valid thru - month<span class="custom-input__blue-text">*</span></span>
+                              <input type="text" id="card-month" name="data[card-month]" minlength="3" maxlength="3" required aria-required>
+                            </label>
+                          </div><span class="payment-form__divider">/</span>
+                          <div class="custom-input" data-form-input-validation="card-year">
+                            <label><span class="custom-input__label visually-hidden">Valid thru - year<span class="custom-input__blue-text">*</span></span>
+                              <input type="text" id="card-year" name="data[card-year]" minlength="3" maxlength="3" required aria-required>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="custom-input" data-form-input-validation="text">
+                          <label><span class="custom-input__label">Cardholder`s name<span class="custom-input__blue-text">*</span></span>
+                            <input type="text" id="cardholder-name" name="data[cardholder-name]" minlength="2" maxlength="255" required aria-required>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="payment-form__fieldset payment-form__fieldset--right">
+                        <div class="custom-input custom-input--short custom-input--tooltip" data-form-input-validation="number">
+                          <label><span class="custom-input__label">CVV/CVC<span class="custom-input__blue-text">*</span></span>
+                            <input type="text" id="card-cvc" name="data[card-cvc]" minlength="3" maxlength="3" required aria-required>
+                            <div class="tooltip" data-tooltip="On the back of your credit/debit card on the right side of the white signature strip">
+                              <svg class="icon" width="22" height="22" aria-hidden="true">
+                                <use xlink:href="img/sprite_auto.svg#icon-question"></use>
+                              </svg>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="payment-form__accept">
+                      <div class="custom-checkbox" data-form-input-validation="checkbox">
+                        <input class="visually-hidden" type="checkbox" id="acceptance" name="data[acceptance]" required aria-required>
+                        <label for="acceptance">I accept <a href='#' class='payment-form__link' data-modal-anchor='modal-terms'>Terms and conditions</a></label>
+                      </div>
+                    </div>
+                    <button class="btn btn--orange" type="submit"><span class="btn__title">Place order (&#36;624.99)</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="payment-selection__element" data-tab-anchor="giftCard">
+                <picture>
+                  <source type="image/webp" srcset="img/content/photo.webp, img/content/photo@2x.webp 2x"><img src="img/content/photo.png" srcset="img/content/photo@2x.png 2x" width="640" height="427" alt="some photo">
+                </picture>
+              </div>
+              <div class="payment-selection__element" data-tab-anchor="payPal">
+                <p>Third content tab</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="modal modal--terms" data-modal="modal-terms">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <div class="modal-terms">
+            <h3 class="title title--h3">Terms and Conditions</h3>
+            <p class="modal-terms__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec auctor justo. Morbi pellentesque porttitor pharetra. Sed eu congue magna. Donec pellentesque ac tellus a consectetur. Pellentesque in ornare sem, ut condimentum lorem. Praesent vitae mollis ex, id tempor felis. Fusce aliquet dui ac libero consequat, a tempor lacus pretium. Proin fermentum molestie orci, ac condimentum massa. Mauris fringilla ligula ultricies tellus sodales ultricies eu nec risus. Curabitur at nisi ac lorem accumsan tincidunt ut eget nisl.</p>
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg class="icon" width="18" height="18" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black:               #000000;
+$color-default-white:               #ffffff;
+$color-transparent:                 rgba(255, 255, 255, 0);
+
+// Project palette
+
+$color-royal-blue:                  #416df4;
+$color-cedar-wood:                  #671d00;
+$color-yellow:                      #fcff00;
+$color-matterhorn:                  #4b4b4b;
+$color-sun:                         #ff863e;
+$color-olivine:                     #96ce6a;
+$color-silver:                      #c4c4c4;
+$color-white-smoke:                 #f6f6f6;
+$color-alizarin:                    #ee2c3c;
+
+
+// Typography
+// ---------------------------------
+
+$ff-roboto:                           "Roboto", "Arial", sans-serif;
+$ff-gotham:                           "Gotham Pro", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     0.3s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-768:                            768px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;

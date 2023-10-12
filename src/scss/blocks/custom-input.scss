@@ -1,0 +1,79 @@
+.custom-input {
+  &--short {
+    max-width: 120px;
+  }
+
+  &:not(:last-of-type):not(:only-of-type) {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  input {
+    border: 1px solid $color-silver;
+    padding: 5px;
+    font-size: 24px;
+    outline: none;
+    transition: border $trans-default;
+
+    @include has-hover {
+      border-color: $color-olivine;
+    }
+
+    &:focus {
+      border-color: $color-olivine;
+    }
+
+    &[aria-invalid="true"] {
+      animation: pulse-red 1.5s;
+    }
+  }
+
+  &--tooltip {
+    position: relative;
+
+    input {
+      padding-right: 30px;
+    }
+
+    .tooltip {
+      right: 6px;
+      bottom: 4px;
+    }
+  }
+
+  &--card-icon {
+    position: relative;
+
+    input {
+      padding-right: 50px;
+    }
+
+    .icon {
+      position: absolute;
+      right: 6px;
+      bottom: 8px;
+    }
+  }
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: none;
+  }
+
+  70% {
+    box-shadow: 0 0 10px 0  $color-alizarin;
+  }
+
+  100% {
+    box-shadow: none;
+  }
+}

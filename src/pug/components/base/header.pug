@@ -1,0 +1,9 @@
+mixin header(currentUrl)
+  header.header
+    .container
+      if(currentUrl === "index.html")
+        span.logo
+          +icon({name: "logo", width: 179, height: 50})
+      else
+        a.logo(href="index.html", aria-label="Переход на главную")
+          +icon({name: "logo", width: 179, height: 50})

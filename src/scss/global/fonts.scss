@@ -1,0 +1,21 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto";
+
+  font-display: swap;
+  src:
+    url("../fonts/roboto-regular.woff2") format("woff2"),
+    url("../fonts/roboto-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Gotham Pro";
+
+  font-display: swap;
+  src:
+    url("../fonts/gothampro-bold.woff2") format("woff2"),
+    url("../fonts/gothampro-bold.woff") format("woff");
+}

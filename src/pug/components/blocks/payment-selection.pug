@@ -1,0 +1,106 @@
+mixin payment-selection(data)
+  .payment-selection(data-tab-parent)
+    .title.title--h3 Payment method
+    .payment-selection__controls(data-tab-controls)
+      +btn({
+        type: "button",
+        text: "Credit card"
+      }).btn--white.is-active(data-tab-anchor-link="creditCard")
+      +btn({
+        type: "button",
+        text: "Gift card"
+      }).btn--white(data-tab-anchor-link="giftCard")
+      +btn({
+        type: "button",
+        text: "PayPal"
+      }).btn--white(data-tab-anchor-link="payPal")
+
+    .payment-selection__content-tabs(data-tab-content)
+      .payment-selection__element.is-active(data-tab-anchor="creditCard")
+        .payment-form(data-form)
+          form(action="#", method="post", novalidate)
+            .payment-form__wrapper
+              .payment-form__fieldset.payment-form__fieldset--left
+                +custom-input({
+                  inputLabel: "Card number",
+                  isRequired: true,
+                  inputId: "card-number",
+                  inputType: "text",
+                  inputName: "data[card-number]",
+                  inputMinLength: 19,
+                  inputMaxLength: 19
+                }).custom-input--with-icon.custom-input--card-icon(data-form-input-validation="card-number")
+                  +icon({name: "icon-card", width: 39, height: 25})
+
+                .payment-form__row
+                  h4.payment-form__subtitle.is-required Valid thru (mm/yy)
+                  +custom-input({
+                    inputLabel: "Valid thru - month",
+                    isHiddenLabel: true,
+                    isRequired: true,
+                    inputId: "card-month",
+                    inputType: "text",
+                    inputName: "data[card-month]",
+                    inputMinLength: 3,
+                    inputMaxLength: 3
+                  })(data-form-input-validation="card-month")
+                  span.payment-form__divider /
+                  +custom-input({
+                    inputLabel: "Valid thru - year",
+                    isHiddenLabel: true,
+                    isRequired: true,
+                    inputId: "card-year",
+                    inputType: "text",
+                    inputName: "data[card-year]",
+                    inputMinLength: 3,
+                    inputMaxLength: 3
+                  })(data-form-input-validation="card-year")
+
+                +custom-input({
+                  inputLabel: "Cardholder`s name",
+                  isRequired: true,
+                  inputId: "cardholder-name",
+                  inputType: "text",
+                  inputName: "data[cardholder-name]",
+                  inputMinLength: 2,
+                  inputMaxLength: 255
+                })(data-form-input-validation="text")
+
+              .payment-form__fieldset.payment-form__fieldset--right
+                +custom-input({
+                  inputLabel: "CVV/CVC",
+                  isHiddenLabel: false,
+                  isRequired: true,
+                  inputId: "card-cvc",
+                  inputType: "text",
+                  inputName: "data[card-cvc]",
+                  inputMinLength: 3,
+                  inputMaxLength: 3
+                }).custom-input--short.custom-input--tooltip(data-form-input-validation="number")
+                  +tooltip({text: "On the back of your credit/debit card on the right side of the white signature strip"})
+
+            .payment-form__accept
+              +custom-checkbox({
+                inputLabelText: "I accept <a href='#' class='payment-form__link' data-modal-anchor='modal-terms'>Terms and conditions</a>",
+                isRequired: true,
+                inputId: "acceptance",
+                inputName: "data[acceptance]"
+              })(data-form-input-validation="checkbox")
+
+            +btn({
+              type: "submit",
+              text: "Place order (&#36;624.99)"
+            }).btn--orange
+
+
+      .payment-selection__element(data-tab-anchor="giftCard")
+        +picture({
+          path: "content",
+          name: "photo",
+          format: "png",
+          width: "640",
+          height: "427",
+          altText: "some photo"
+        })
+      .payment-selection__element(data-tab-anchor="payPal")
+        p Third content tab

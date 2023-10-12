@@ -1,0 +1,16 @@
+mixin checkout-list(data)
+  .checkout-list
+    if(data.title)
+      h3.title.title--h3!=data.title
+    if(data.list)
+      ul.checkout-list__table
+        each item in data.list
+          li.checkout-list__element
+            p.checkout-list__description
+              if(item.description)
+                if (item.link)
+                  a.link(href=item.link)!=item.description
+                else
+                  !=item.description
+            if(item.price)
+              p.checkout-list__price!=item.price

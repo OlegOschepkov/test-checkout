@@ -1,0 +1,7 @@
+[data-tab-anchor] {
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}

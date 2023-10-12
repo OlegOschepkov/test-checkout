@@ -1,0 +1,28 @@
+.tooltip {
+  display: inline;
+  position: absolute;
+
+  &::after {
+    content: attr(data-tooltip);
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    left: -153px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    margin: 0;
+    width: 150px;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: $color-silver;
+    z-index: -10;
+    transition: opacity $trans-default;
+  }
+
+  &.is-active::after {
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
+}

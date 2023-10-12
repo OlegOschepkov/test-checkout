@@ -1,0 +1,11 @@
+mixin icon(options = {})
+  -
+    const name = options.name;
+    const width = options.width;
+    const height = options.height;
+
+  svg.icon(width=width, height=height, aria-hidden="true")&attributes(attributes)
+    use(xlink:href="img/sprite_auto.svg#" + name)
+
+//- &attributes(attributes) позволяет вызывать миксин с доп классом и аттрибутами
+//- +icon("icon-close", 15, 15).some-class

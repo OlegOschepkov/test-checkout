@@ -1,0 +1,28 @@
+.title {
+  margin: 0;
+  padding: 0;
+  color: $color-default-black;
+  font-family: $ff-gotham;
+  font-weight: 700;
+
+  &--h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  &--h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+}
+
+.link {
+  color: $color-royal-blue;
+  opacity: 1;
+  transition: opacity $trans-default;
+  text-decoration: underline;
+
+  @include has-hover {
+    opacity: 0.75;
+  }
+}

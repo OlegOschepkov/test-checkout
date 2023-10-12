@@ -1,0 +1,22 @@
+extends ../components/base/layout
+
+block variables
+  -
+    const title = "Главная страница"
+    const hasHeader = true
+    const hasFooter = true
+    const currentUrl = ""
+    const currentPage = "main"
+
+block main
+  main
+    .container
+      h1.visually-hidden Главная страница
+      h2.title.title--h2 Checkout
+      each list in dataLists
+        +checkout-list(list)
+      +payment-selection(dataPaymentSelection)
+
+block modals
+  +modal("modal--terms")(data-modal="modal-terms")
+    +modal-terms

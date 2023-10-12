@@ -1,0 +1,12 @@
+mixin custom-checkbox(options = {})
+  -
+    const inputId = options.inputId ? options.inputId : false
+    const inputName = options.inputName ? options.inputName : false
+    const inputLabelText = options.inputLabelText ? options.inputLabelText : false
+    const isRequired = options.isRequired ? options.isRequired : false
+    const isDisabled = options.isDisabled ? options.isDisabled : false
+    const isChecked = options.isChecked ? options.isChecked : false
+
+  .custom-checkbox&attributes(attributes)
+    input.visually-hidden(type="checkbox", id=inputId, name=inputName, checked=isChecked, disabled=isDisabled, required=isRequired, aria-required=isRequired)
+    label(for=inputId)!=inputLabelText

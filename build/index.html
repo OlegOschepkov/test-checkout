@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- - Forms-->
+<!-- - Modals-->
+<html lang="ru">
+  <head>
+    <title>Тестовое</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Тестовое">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container"><span class="logo">
+            <svg class="icon" width="179" height="50" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#logo"></use>
+            </svg></span>
+        </div>
+      </header>
+      <style>
+        .container {
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+        
+        .main-index .logo img {
+          height: 100%;
+          width: 300px;
+        }
+        
+        h1 {
+          font-size: 24px;
+          line-height: 28px;
+        }
+        
+        a {
+          color: #000000;
+          transition: color 0.3s;
+        }
+        
+        a:hover {
+          color: #416df4;
+        }
+        
+        li {
+          font-size: 18px;
+          line-height: 22px;
+          margin-bottom: 7px;
+        }
+        
+        img {
+          width: 100%;
+          max-width: 300px;
+          height: auto;
+          display: block;
+        }
+        
+        @media (max-width: 768px) {
+          .container {
+            padding-top: 20px;
+            padding-bottom: 20px;
+          }
+        
+          ol {
+            padding-left: 20px;
+          }
+        
+          ol li {
+            margin-bottom: 15px;
+          }
+        }
+        
+      </style>
+      <main class="container main-index">
+        <h1>Список страниц</h1>
+        <ol>
+          <li><a href="main.html">Главная — main.html</a></li>
+        </ol>
+      </main>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
