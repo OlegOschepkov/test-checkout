@@ -9,7 +9,6 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './js/index.js',
-    vendor: './js/vendor.js',
   },
   devtool: !isProd ? 'source-map' : false,
   output: {
